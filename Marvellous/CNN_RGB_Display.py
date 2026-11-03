@@ -1,0 +1,34 @@
+from PIL import Image
+import numpy as np
+
+img = Image,open("color.png")
+
+img = img.resize((28,28))
+
+pixels = np.array(img)
+
+print("information  image")
+
+print("image shape:",pixels.shape)
+
+print("Height :",pixels.shape[0],"Rows")
+
+print("width :",pixels.shape[1],"columns")
+
+print("Chaneels :",pixels.shape[2],"R G B")
+
+total = pixels.shape[0] * pixels.shape[1] * pixels.shape[2]
+
+print("Total pixels:",total)
+
+print("Single pixles meaning :")
+
+r = pixels[10] [10] [0]
+g = pixels[10] [10] [1]
+b = pixels[10] [10] [2]
+
+print("Pixels detais of 10,10 pixels is :")
+
+print("Red",r)
+print("Greeen",g)
+print("blue",b)
